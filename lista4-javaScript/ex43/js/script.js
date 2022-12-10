@@ -1,20 +1,23 @@
-var A = parseFloat(prompt("Digite o valor de A: "));
-var B = parseFloat(prompt("Digite o valor de B: "));
-var C = parseFloat(prompt("Digite o valor de C: "));
+var a = parseFloat(prompt("Digite o valor de A: "));
+var b = parseFloat(prompt("Digite o valor de B: "));
+var c = parseFloat(prompt("Digite o valor de C: "));
 
-if (A < B+C & B < A+C & C < A+B){
-    if (A == B & B == C){
-        mens = "Triângulo equilátero"
-        document.write ("É possivel formar um" + mens)
-    } else if (A == B & B == C & A == C){
-        mens = "Triângulo isósceles"
-        document.write("É possivel formar um "+ mens)
-    } else{
-        var mens = "Triangulo escaleno";
+
+if (a < b+c && b <a+c && c <a+b) {
+
+    if (a==b && b==c) {
+        var mens= "Triângulo Equilátero";
     }
-}
-else {
-    var mens = "Triângulo Escaleno";
-}
+    else if (a==b || b==c || a==c) {
+        var mens= "Triângulo Isósceles";
+        document.write("Com o valor dos lados informados, é possível formar um " + mens);
+    } 
+    else {
+        var mens= "Triângulo Escaleno";
+        document.write("Com o valor dos lados informados, é possível formar um " + mens);
+    }
 
-document.write (mens);
+} 
+else{
+    document.write("Não é possível formar um triângulo!")
+}
